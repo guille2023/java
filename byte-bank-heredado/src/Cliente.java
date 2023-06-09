@@ -1,0 +1,51 @@
+public class Cliente implements Autenticable {
+
+        private String nombre;
+        private String documento;
+        private String telefono;
+
+        private AutenficacionUtil util;
+
+        public Cliente(){
+            this.util = new AutenficacionUtil();
+        }
+
+        public String getDocumento() {
+            return documento;
+        }
+
+        public void setDocumento(String documento) {
+            this.documento = documento;
+        }
+
+
+
+    public String getTelefono() {
+            return telefono;
+        }
+
+        public void setTelefono(String telefono) {
+            this.telefono = telefono;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+
+    @Override
+    public void setClave(String clave) {
+            this.setClave(clave);
+
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        return this.util.iniciarSesion(clave);
+    }
+}
+
+
